@@ -1,8 +1,8 @@
 name       : python-alembic
-version    : 0.8.10
-release    : 2
+version    : 1.0.1
+release    : 3
 source     :
-    - https://pypi.python.org/packages/f0/7d/7fcda63887d9726e0145e98802baf374ec8cf889325e469194cd7926c98e/alembic-0.8.10.tar.gz : 0e3b50e96218283ec7443fb661199f5a81f5879f766967a8a2d25e8f9d4e7919
+    - https://files.pythonhosted.org/packages/1a/37/8df0e37d730f096f5a41514823eaec3c5e169510a5c5ddc3dcbab5446ee8/alembic-1.0.1.tar.gz : 0fe570f23dc48fb1bbda6f6a396f1c0c28d7045c0ad14018c104a511e6c1fe8a
 license    : MIT
 component  : programming.python
 summary    : A database migration tool for SQLAlchemy
@@ -12,6 +12,8 @@ builddeps  :
     - python-setuptools
 rundeps    :
     - mako
+    - python-dateutil
+    - python-editor
     - python-sqlalchemy
 build      : |
     %python_setup
