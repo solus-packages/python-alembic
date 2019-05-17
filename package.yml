@@ -1,23 +1,28 @@
 name       : python-alembic
-version    : 1.0.1
-release    : 3
+version    : 1.0.10
+release    : 4
 source     :
-    - https://files.pythonhosted.org/packages/1a/37/8df0e37d730f096f5a41514823eaec3c5e169510a5c5ddc3dcbab5446ee8/alembic-1.0.1.tar.gz : 0fe570f23dc48fb1bbda6f6a396f1c0c28d7045c0ad14018c104a511e6c1fe8a
+    - https://files.pythonhosted.org/packages/source/a/alembic/alembic-1.0.10.tar.gz : 828dcaa922155a2b7166c4f36ec45268944e4055c86499bd14319b4c8c0094b7
 license    : MIT
 component  : programming.python
 summary    : A database migration tool for SQLAlchemy
 description: |
-    A database migration tool for SQLAlchemy
+    Alembic is a database migrations tool written by the author of SQLAlchemy.
 builddeps  :
-    - python-setuptools
+    - mako
+    - python-dateutil
+    - python-editor
+    - python-mock
+    - python-pytest
+    - python-sqlalchemy
 rundeps    :
     - mako
     - python-dateutil
     - python-editor
     - python-sqlalchemy
 build      : |
-    %python_setup
     %python3_setup
 install    : |
-    %python_install
     %python3_install
+check      : |
+    %python3_test
